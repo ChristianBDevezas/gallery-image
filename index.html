@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="image-gallery.css">
+    <title>Image Gallery</title>
+</head>
+<body>
+    <section id="slider" class="slider">
+        <div class="slider__title hide-title">
+            <h2>Image Gallery</h2>
+        </div>
+
+        <div class="slider__content">
+            <div class="slider__content__images">
+                <div class="slider__content__item">
+                    <img src="img/charlize-theron.jpg" alt="Charliz Theron" class="slider__image">
+                    <h4>Charliz Theron</h4>
+                </div>
+
+                <div class="slider__content__item">
+                    <img src="img/denzel-washington.jpg" alt="Denzel Washington" class="slider__image">
+                    <h4>Denzel Washington</h4>
+                </div>
+
+                <div class="slider__content__item">
+                    <img src="img/kate-winslet.jpg" alt="Kate Winslet" class="slider__image current-img">
+                    <h4 class="current-txt">Kate Winslet</h4>
+                </div>
+
+                <div class="slider__content__item">
+                    <img src="img/sandra-bullock.jpg" alt="Sandra Bullock" class="slider__image">
+                    <h4>Sandra Bullock</h4>
+                </div>
+
+                <div class="slider__content__item">
+                    <img src="img/tom-hanks.jpg" alt="Tom Hanks" class="slider__image">
+                    <h4>Tom Hanks</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider__content__controls">
+            <span id="arrow-left"><i class="fas fa-arrow-alt-circle-left"></i></span>
+            <span id="arrow-right"><i class="fas fa-arrow-alt-circle-right"></i></span>
+        </div>
+    </section>
+
+    <script src="image-gallery.js"></script>
+</body>
+</html>
