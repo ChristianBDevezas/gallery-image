@@ -1,8 +1,7 @@
 const images = document.querySelectorAll(".slider__image");
 const totalImages = images.length;
 const names = document.querySelectorAll(".slider__content__item h4");
-const arrowLeft = document.getElementById("arrow-left");
-const arrowRight = document.getElementById("arrow-right");
+const arrowButtons = document.querySelectorAll(".arrow-btn");
 const btnSound = document.getElementById("btn-sound");
 let index = 2;
 
@@ -35,28 +34,22 @@ function playSound() {
     btnSound.currentTime = 0;
 }
 
-arrowLeft.addEventListener("click", () => {
-    clearInterval(intervalImage);
-    removeEffect();
+arrowButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+        clearInterval(intervalImage);
+        removeEffect();
 
-    index--;
-    checkCurrentImage();
+        if(button.classList.contains("arrow-right")) {
+            index++;
+        }
+        if(button.classList.contains("arrow-left")) {
+            index--;
+        }
+        
+        checkCurrentImage();
+        changeImage(index);
+        intervalImage = setInterval(showImage, 3500);
 
-    changeImage(index);
-    intervalImage = setInterval(showImage, 3500);
-
-    playSound();
-});
-
-arrowRight.addEventListener("click", () => {
-    clearInterval(intervalImage);
-    removeEffect();
-
-    index++;
-    checkCurrentImage();
-
-    changeImage(index);
-    intervalImage = setInterval(showImage, 3500);
-
-    playSound();
+        playSound();
+    });
 });
